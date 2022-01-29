@@ -121,6 +121,9 @@ let districlist = document.querySelectorAll(".distric-link-private");
 let places = document.querySelectorAll(".place");
 
 
+
+
+
 districlist.forEach(btn =>{
     btn.addEventListener("click" , ()=>{
        
