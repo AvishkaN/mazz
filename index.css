@@ -1995,12 +1995,16 @@ footer{
   }
 
   @media only screen and (max-width: 600px) {
-    .mySlides img {
-      width: 100%;
-      height: 80%;
-      position: absolute;
-      /* border: 4px solid #008339; */
-  }
+            .mySlides img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /* border: 4px solid #008339; */
+        }
+
+        .slideshow-container {
+            height: 35vh;   
+        }
   }
   
   /* Next & previous buttons */
