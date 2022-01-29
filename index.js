@@ -141,17 +141,52 @@ districlist.forEach(btn =>{
 })
 
 
+const Prev= document.querySelector(".prev")
+const Next= document.querySelector(".next")
+
+
 var slideIndex = 0;
 showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 3500); // Change image every 2 seconds
+let timeout0=10;  
+
+
+function showSlides() { 
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    
+     timeout0=setTimeout(showSlides, 1000); // Change image every 2 seconds
 } 
+
+
+
+Prev.addEventListener("click", function() {
+    console.log("Hello World!");
+
+    
+
+
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+
+
+    clearTimeout(timm);
+  });
+
+
+
+Next.addEventListener("click", function() {
+    console.log("Hello World! 2");
+  });
