@@ -149,7 +149,19 @@ const Next= document.querySelector(".next")
 var slideIndex = 0;
 showSlides();
 
-let timeout0=10;  
+
+const slideChange=()=>{
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+
+
+};
 
 
 function showSlides() { 
@@ -162,34 +174,19 @@ function showSlides() {
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
     
-     timeout0=setTimeout(showSlides, 1000); // Change image every 2 seconds
+     setTimeout(showSlides, 3500); // Change image every 2 seconds
 } 
 
 
 
 Prev.addEventListener("click", function() {
-    console.log("Hello World!");
-
-    
-
-
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-
-
-    clearTimeout(timm);
-  });
+    slideChange();
+});
 
 
 
 Next.addEventListener("click", function() {
-    console.log("Hello World! 2");
+    slideChange();
   });
 =======
 // var slideIndex = 0;
