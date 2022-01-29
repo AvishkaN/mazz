@@ -1977,7 +1977,7 @@ footer{
     max-width: 1000px;
     position: relative;
     margin: auto;
-    height: 30vh;   
+    height: 48vh;   
 
 
   }
@@ -2003,7 +2003,7 @@ footer{
         }
 
         .slideshow-container {
-            height: 35vh;   
+            height: 30vh;   
         }
   }
   
